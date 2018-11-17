@@ -15,4 +15,14 @@ ____
 
 For any issues, check the Issues tab in the github repository.
 
+## Building InkHaxe
 
+### For Javascript
+
+`haxe -main Inkruntime -js InkHaxe.js` will generate a script file containing the entire runtime.
+To embed it in your web projects, add `<script src="InkHaxe.js"></script>` to your `index.html` file. This will allow you to construct and execute a Story object in your other scripts like so:
+```
+myStory = new ink.runtime.Story(inkFile);
+```
+
+See `bin/index-demo.html` for an in-depth example of running your Ink project in a web page.
